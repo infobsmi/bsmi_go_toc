@@ -16,7 +16,25 @@ var exampleHtml = `
 <p>双重输入很容易且相对直观，但有一个明显的例外。在我们的日常工作和演讲中，财务&ldquo;借&rdquo;是取款，&ldquo;贷&rdquo;是加。在复式簿记中，情况并非如此。</p>
 <h3>复式记账案例</h3>
 <p>在该系统中，&ldquo;借方&rdquo;一词仅表示在两列输入系统的左列中进行输入，而&ldquo;贷方&rdquo;表示在右侧输入。如果你能把它卡在你的脑海里，那一切都是有道理的。</p>
+
+<h4>复式记账案例 jj</h4>
 <p>对于资产和费用，借方的条目表明账户余额增加。对于负债、权益和收入，增加记录在贷方栏中。如果系统的这一部分是压倒性的，只需制作一个备忘单。</p>
+
+<h4>复式记账案例 kk</h4>
+<h3>复式记账案例 kk</h3>
+<h4>复式记账案例 kk</h4>
+<h3>复式记账案例 kk</h3>
+<h4>复式记账案例 kk</h4>
+<h4>复式记账案例 kk</h4>
+<h3>复式记账案例 kk</h3>
+<h4>复式记账案例 kk</h4>
+<h3>复式记账案例 kk</h3>
+<h4>复式记账案例 kk</h4>
+<h5>复式记账案例 kk</h5>
+<h3>复式记账案例 kk</h3>
+<h4>复式记账案例 kk</h4>
+<h3>复式记账案例 kk</h3>
+<h4>复式记账案例 kk</h4>
 <p>因此，例如，当您的公司购买拖拉机时&mdash;&mdash;为什么你的甜甜圈企业需要拖拉机我无法理解，但这是一个会计部分，而不是战略部分&mdash;&mdash;你将增加一种资产并减少另一种资产。具体来说，您将增加&ldquo;机械&rdquo;等资产类型并减少&ldquo;现金&rdquo;。</p>
 <p>在此示例中，您将向机械账户进行借记分录&mdash;&mdash;增加的资产获得借记分录&mdash;&mdash;以及对现金账户的贷记分录&mdash;&mdash;减少的资产获得贷记分录。</p>
 <p>回顾会计等式，您的数字实际上不会改变，因为您只增加和减少了资产。结果，增加和减少都发生在等式的同一侧。</p>
@@ -134,7 +152,7 @@ var exampleHtml = `
 
 func TestTocGen(t *testing.T) {
 	oc, ob, _ := Toc_generate(exampleHtml)
-	fmt.Println(oc)
-	fmt.Println(ob)
+	fmt.Println("outStr: " + oc)
+	fmt.Println("afterHtml: " + ob)
 	fmt.Println("hello world")
 }
