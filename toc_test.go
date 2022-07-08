@@ -151,7 +151,7 @@ var exampleHtml = `
 <p>即便如此，了解复式记账的理论和流程的好处可以帮助您更好地了解您的企业财务运作方式。这是每个小型企业都可以使用的东西。</p>`
 
 func TestTocGen(t *testing.T) {
-	oc, ob, _ := Toc_generate(exampleHtml)
+	oc, ob, _ := TocGenerate(exampleHtml)
 	fmt.Println("outStr: " + oc)
 	fmt.Println("afterHtml: " + ob)
 	fmt.Println("hello world")

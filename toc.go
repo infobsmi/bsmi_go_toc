@@ -18,7 +18,7 @@ type TocItem struct {
 }
 
 //生成目录html
-func Toc_generate(input string) (outStr string, afterHtml string, err error) {
+func TocGenerate(input string) (outStr string, afterHtml string, err error) {
 	// Parse the HTML into nodes
 	root, e := html.Parse(strings.NewReader(input))
 	if e != nil {
@@ -32,7 +32,7 @@ func Toc_generate(input string) (outStr string, afterHtml string, err error) {
 	doc.Find("h1,h2,h3,h4,h5,h6").Each(func(orderIdx int, selection *goquery.Selection) {
 		fmt.Println("selection.Nodes[0].Data ->  " + selection.Nodes[0].Data + " title -> " + selection.Text())
 
-		tmpUniqId := Toc_newid()
+		tmpUniqId := TocNewid()
 		rawTocItemList = append(rawTocItemList, TocItem{
 			ParentId:  "",
 			ParentLv:  0,
@@ -158,7 +158,7 @@ func getLv(data string) int {
 	}
 }
 
-func Toc_newid() string {
+func TocNewid() string {
 	id, err := gonanoid.New()
 
 	if err != nil {
